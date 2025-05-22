@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>시간표</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+            padding: 20px;
+        }
+
+        table {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        caption {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tbody th {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+
+        .subject {
+            position: relative;
+            display: inline-block;
+            padding: 5px 10px;
+            font-weight: bold;
+            color: #333;
+            cursor: default;
+        }
+
+        .subject::after {
+            content: attr(data-subject);
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .subject:hover::after {
+            content: attr(data-teacher);
+            background-color: #d4edda;
+            padding: 4px 8px;
+            border-radius: 6px;
+            color: #155724;
+        }
+
+
+        .subject[data-subject="응프개"],
+        .subject[data-subject="시스프"],
+        .subject[data-subject="자료"] {
+            background-color: #fff9c4;
+
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>시간표</caption>
+        <thead>
+            <tr>
+                <th>교시</th>
+                <th>월요일</th>
+                <th>화요일</th>
+                <th>수요일</th>
+                <th>목요일</th>
+                <th>금요일</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1교시</th>
+                <td><span class="subject" data-subject="시스프" data-teacher="김형준"></span></td>
+                <td><span class="subject" data-subject="문학" data-teacher="한수현"></span></td>
+                <td><span class="subject" data-subject="영어" data-teacher="이승은"></span></td>
+                <td><span class="subject" data-subject="시스프" data-teacher="김형준"></span></td>
+                <td><span class="subject" data-subject="한국사" data-teacher="유시현"></span></td>
+            </tr>
+            <tr>
+                <th>2교시</th>
+                <td><span class="subject" data-subject="영어" data-teacher="이승은"></span></td>
+                <td><span class="subject" data-subject="응프개" data-teacher="김형준"></span></td>
+                <td><span class="subject" data-subject="문학" data-teacher="한수현"></span></td>
+                <td><span class="subject" data-subject="시스프" data-teacher="김형준"></span></td>
+                <td><span class="subject" data-subject="응프개" data-teacher="김형준"></span></td>
+            </tr>
+            <tr>
+                <th>3교시</th>
+                <td><span class="subject" data-subject="응프개" data-teacher="김형준"></span></td>
+                <td><span class="subject" data-subject="체육" data-teacher="장현석"></span></td>
+                <td><span class="subject" data-subject="응프개" data-teacher="김형준"></span></td>
+                <td><span class="subject" data-subject="영아" data-teacher="이승은"></span></td>
+                <td><span class="subject" data-subject="시스프" data-teacher="김형준"></span></td>
+            </tr>
+            <tr>
+                <th>4교시</th>
+                <td><span class="subject" data-subject="응프개" data-teacher="김형준"></span></td>
+                <td><span class="subject" data-subject="한국사" data-teacher="유시현"></span></td>
+                <td><span class="subject" data-subject="시스프" data-teacher="김형준"></span></td>
+                <td><span class="subject" data-subject="문학" data-teacher="한수현"></span></td>
+                <td><span class="subject" data-subject="시스프" data-teacher="김형준"></span></td>
+            </tr>
+            <tr>
+                <th>5교시</th>
+                <td><span class="subject" data-subject="자료" data-teacher="최승남"></span></td>
+                <td><span class="subject" data-subject="시스프" data-teacher="김형준"></span></td>
+                <td><span class="subject" data-subject="미술" data-teacher="박성희"></span></td>
+                <td><span class="subject" data-subject="시스프" data-teacher="김형준"></span></td>
+                <td><span class="subject" data-subject="창체" data-teacher="장현석"></span></td>
+            </tr>
+            <tr>
+                <th>6교시</th>
+                <td><span class="subject" data-subject="자료" data-teacher="최승남"></span></td>
+                <td><span class="subject" data-subject="미술" data-teacher="박성희"></span></td>
+                <td><span class="subject" data-subject="자율" data-teacher="김형준"></span></td>
+                <td><span class="subject" data-subject="한국사" data-teacher="유시현"></span></td>
+                <td><span class="subject" data-subject="창체" data-teacher="장현석"></span></td>
+            </tr>
+            <tr>
+                <th>7교시</th>
+                <td><span class="subject" data-subject="응프개" data-teacher="김형준"></span></td>
+                <td></td>
+                <td></td>
+                <td><span class="subject" data-subject="응프개" data-teacher="김형준"></span></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
